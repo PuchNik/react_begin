@@ -5,6 +5,7 @@ import './App.css'
 import {StateComponent} from "./components/StateComponent.jsx";
 import {RenderComponent} from "./components/RenderComponent.jsx";
 import {ImmutableComponent} from "./components/ImmutableComponent.jsx";
+import { MyComponent } from './components/MyComponent.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,6 +32,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+        <MyComponent/>
         <StateComponent />
         <ImmutableComponent />
         <RenderComponent />
