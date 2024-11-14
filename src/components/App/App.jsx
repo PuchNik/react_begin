@@ -1,17 +1,20 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import reactLogo from '../../assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
-import {StateComponent} from "./components/StateComponent.jsx";
-import {RenderComponent} from "./components/RenderComponent.jsx";
-import {ImmutableComponent} from "./components/ImmutableComponent.jsx";
-import { MyComponent } from './components/MyComponent.jsx';
+import styles from './App.module.css'
+import {StateComponent} from "../StateComponent.jsx";
+import {RenderComponent} from "../RenderComponent.jsx";
+import {ImmutableComponent} from "../ImmutableComponent.jsx";
+import { MyComponent } from '../MyComponent/MyComponent.jsx';
+import {EventComponent} from "../EventComponent.jsx";
 
-function App() {
+
+export default function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+        <header className={styles.header}>HEADER</header>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -36,8 +39,9 @@ function App() {
         <StateComponent />
         <ImmutableComponent />
         <RenderComponent />
+        <EventComponent/>
     </>
   )
 }
 
-export default App
+
