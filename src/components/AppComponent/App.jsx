@@ -7,10 +7,22 @@ import {RenderComponent} from "../RenderComponent.jsx";
 import {ImmutableComponent} from "../ImmutableComponent.jsx";
 import { MyComponent } from '../MyComponent/MyComponent.jsx';
 import {EventComponent} from "../EventComponent.jsx";
+import {UserComponent} from '../UserComponent/UserComponent.jsx'
+
+
+const getUserFromServer = {
+    name: 'Nik',
+    age: 23,
+    email: 'puschkov@mail.ru',
+    phone: '+7-999-999-99-99'
+}
 
 
 export default function App() {
-  const [count, setCount] = useState(0)
+    const [count, setCount] = useState(0)
+
+    const user = getUserFromServer
+
 
   return (
     <>
@@ -40,6 +52,12 @@ export default function App() {
         <ImmutableComponent />
         <RenderComponent />
         <EventComponent/>
+
+        <div className={styles.app}>
+            <label className={styles['app-label']}>Приложение:</label>
+            <div>Разная информация приложения</div>
+            <UserComponent {...user}/>
+        </div>
     </>
   )
 }
