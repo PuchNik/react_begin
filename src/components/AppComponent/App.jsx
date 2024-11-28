@@ -5,10 +5,10 @@ import styles from './App.module.css'
 import {StateComponent} from "../StateComponent.jsx";
 import {RenderComponent} from "../RenderComponent.jsx";
 import {ImmutableComponent} from "../ImmutableComponent.jsx";
-import { MyComponent } from '../MyComponent/MyComponent.jsx';
+import {MyComponent} from '../MyComponent/MyComponent.jsx';
 import {EventComponent} from "../EventComponent.jsx";
 import {UserComponent} from '../UserComponent/UserComponent.jsx'
-
+import {LabelComponent} from "../LabelComponent/LabelComponent.jsx";
 
 const getUserFromServer = {
     name: 'Nik',
@@ -54,7 +54,7 @@ export default function App() {
         <EventComponent/>
 
         <div className={styles.app}>
-            <label className={styles['app-label']}>Приложение:</label>
+            <LabelComponent color={'red'}>Приложения</LabelComponent>
             <div>Разная информация приложения</div>
             <UserComponent {...user}/>
         </div>

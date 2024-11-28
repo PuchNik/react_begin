@@ -1,13 +1,18 @@
-import styles from "./UserComponent.module.css"
-import {ContactsComponent} from "../ContactsComponent/ContactsComponent.jsx";
+/* eslint-disable react/prop-types */
 
-export const UserComponent = (name, age, ...contacts) => {
+import {ContactsComponent} from "../ContactsComponent/ContactsComponent.jsx";
+import {LabelComponent} from "../LabelComponent/LabelComponent.jsx";
+
+
+export const UserComponent = ({name, age, ...contacts}) => {
     return (
-        <div className={styles.user}>
-            <label className={styles['user-label']}></label>
-            <div>Имя: {name}</div>
-            <div>Возраст: {age}</div>
-            <ContactsComponent {...contacts}/>
-        </div>
+        <>
+            <div>
+                <LabelComponent color={'blue'}>Пользователь</LabelComponent>
+                <div>Имя: {name}</div>
+                <div>Возраст: {age}</div>
+                <ContactsComponent {...contacts}/>
+            </div>
+        </>
     )
 }
